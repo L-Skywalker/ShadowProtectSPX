@@ -35,7 +35,7 @@ Function Install-Stcvsm67XDriver {
         [parameter(Mandatory = $false,
             ValueFromPipeline = $false,
             Position = 1)]
-        [String]$DriverLocation = 'https://github.com/L-Skywalker/StorageCraft/raw/master/ShadowProtectSPX/SPX6.7.X/StcvsmBugFix/MSFT%20Signed%20-%20stcvsm-2.2.73.0.36.zip'
+        [String]$DriverLocation = 'https://github.com/L-Skywalker/ShadowProtectSPX/raw/master/MSFT%20Signed%20-%20stcvsm-2.2.73.0.36.zip'
     )
 #EndRegion - Parameters
 #Region - Begin Block
