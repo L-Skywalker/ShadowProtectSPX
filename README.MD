@@ -1,5 +1,5 @@
 
-###6.7.x BSOD Fix
+### 6.7.x BSOD Fix
 
 ##### Install-Stcvsm67XDriver
 ```
