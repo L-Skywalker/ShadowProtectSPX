@@ -94,7 +94,7 @@ Function Check-StcvsmVersion {
             @{ Label = 'StcvsmVersion'; Expression = { $_.StcvsmVersion }; Alignment = 'Left' }
             @{ Label = 'PatchedDriverPresent'; Expression = { $_.PatchedDriverPresent }; Alignment = 'Left' }
         )
-        $AllVersionChecks | Format-Table -Property $TableProperties -AutoSize
+        $AllVersionChecks #| Format-Table -Property $TableProperties -AutoSize
     }
 #EndRegion - End Block
 }
