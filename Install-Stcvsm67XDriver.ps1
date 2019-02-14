@@ -138,14 +138,15 @@ Function Install-Stcvsm67XDriver {
     }
 #EndRegion - Process Block
 #Region - End Block
-    End {
+    End {<#
         $TableProperties = @(
             @{ Label = 'ComputerName'; Expression = { $_.ComputerName }; Alignment = 'Left' }
             @{ Label = 'InstallSuccessful'; Expression = { $_.InstallSuccessful }; Alignment = 'Left' }
             @{ Label = 'SPXVersion'; Expression = { $_.SPXVersion }; Alignment = 'Left' }
             @{ Label = 'StcvsmVersion'; Expression = { $_.StcvsmVersion }; Alignment = 'Left' }
         )
-        $AllInstallResults | Format-Table -Property $TableProperties -AutoSize
+        #>
+        $AllInstallResults
     }
 #EndRegion - End Block
 }
