@@ -99,7 +99,7 @@ Function Install-Stcvsm67XDriver {
                     # END - Validate Driver Download
                     # BEGIN - Install Driver
                     Try {
-                        Rename-Item -Path "$DriverPath\stcvsm.sys" -NewName 'stcvsm-rtm.sys'
+                        Rename-Item -Path "$DriverPath\stcvsm.sys" -NewName 'stcvsm-rtm.sys' -ErrorAction 'SilentlyContinue'
                     } Catch {
                         Write-Verbose -Message 'Unable to remove current stcvsm driver.'
                     }
