@@ -52,7 +52,7 @@ Function Install-Stcvsm67XDriver {
         #Built in version check
         $SPXVersion = (Get-ChildItem -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall, HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall | Get-ItemProperty | Where-Object {$_.DisplayName -like 'StorageCraft ShadowProtect SPX' } | Select-Object -ExpandProperty DisplayVersion)
         if ($SPXVersion -like '6.7.*') {
-            $CurrentDriverVersion = (Get-ItemProperty "$driverpath\stcvsm.sys" | Select-Object -ExpandProperty versioninfo).productversion
+            $CurrentDriverVersion = (Get-ItemProperty "$driverpath\stcvsm.sys" -ErrorAction 'SilentlyContinue' | Select-Object -ExpandProperty versioninfo).productversion
             if ($CurrentDriverVersion -eq '2.2.73.0.36' ) {
                 Write-Verbose 'stcvsm.sys driver version 2.2.73.0.36 already present'
             } else {
