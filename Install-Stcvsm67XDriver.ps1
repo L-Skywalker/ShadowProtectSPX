@@ -120,7 +120,7 @@ Function Install-Stcvsm67XDriver {
                     }
                 }
                 # End - Install Driver
-                $CurrentDriverVersion = (Get-ItemProperty "$driverpath\stcvsm.sys" | Select-Object -ExpandProperty versioninfo).productversion
+                $CurrentDriverVersion = (Get-ItemProperty "$driverpath\stcvsm.sys" -ErrorAction SilentlyContinue | Select-Object -ExpandProperty versioninfo).productversion
                 if ($CurrentDriverVersion -eq '2.2.73.0.36' ) {
                     $Successful = $true
                 }
