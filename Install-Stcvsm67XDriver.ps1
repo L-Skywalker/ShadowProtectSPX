@@ -98,7 +98,7 @@ Function Install-Stcvsm67XDriver {
                     }
                     # END - Validate Driver Download
                     # BEGIN - Install Driver
-                    If (Test-Path "$DriverPath\stcvsm.sys){
+                    If (Test-Path "$DriverPath\stcvsm.sys"){
                         Try {
                             Rename-Item -Path "$DriverPath\stcvsm.sys" -NewName 'stcvsm-rtm.sys' -ErrorAction 'SilentlyContinue'
                         } Catch {
